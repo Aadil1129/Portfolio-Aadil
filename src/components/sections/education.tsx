@@ -20,17 +20,7 @@ export default function EducationSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+
 
   const achievements = [
     "Strong foundation in computer science fundamentals",
@@ -186,7 +176,7 @@ export default function EducationSection() {
                 Continuous Learning
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Beyond formal education, I'm committed to continuous learning and staying updated
+                Beyond formal education, I&apos;m committed to continuous learning and staying updated
                 with the latest technologies. I regularly participate in online courses, attend tech
                 conferences, and contribute to open-source projects to enhance my skills and
                 knowledge in web development.

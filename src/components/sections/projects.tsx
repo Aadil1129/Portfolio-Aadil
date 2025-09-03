@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Code, Eye } from "lucide-react";
+import { ExternalLink, Github, Eye } from "lucide-react";
+import Image from "next/image";
 
 export default function ProjectsSection() {
   const ref = useRef(null);
@@ -20,17 +21,7 @@ export default function ProjectsSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+
 
   const projects = [
     {
@@ -107,34 +98,12 @@ export default function ProjectsSection() {
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      // Fallback to gradient background if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = "none";
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.className =
-                          "relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden";
-                        parent.innerHTML = `
-                          <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-                          <div class="absolute inset-0 flex items-center justify-center">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white opacity-50">
-                              <polyline points="16,18 22,12 16,6"></polyline>
-                              <polyline points="8,6 2,12 8,18"></polyline>
-                            </svg>
-                          </div>
-                          ${
-                            project.featured
-                              ? '<div class="absolute top-4 left-4"><span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">Featured</span></div>'
-                              : ""
-                          }
-                        `;
-                      }
-                    }}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   {project.featured && (
                     <div className="absolute top-4 left-4">

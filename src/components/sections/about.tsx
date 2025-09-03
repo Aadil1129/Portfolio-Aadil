@@ -20,17 +20,7 @@ export default function AboutSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+
 
   const highlights = [
     {
@@ -86,7 +76,7 @@ export default function AboutSection() {
               className="space-y-6"
             >
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a passionate React.js Developer based in Delhi, India, with over 2 years of
+                I&apos;m a passionate React.js Developer based in Delhi, India, with over 2 years of
                 experience in building modern, scalable web applications. My journey in web
                 development has been driven by a love for creating exceptional user experiences and
                 solving complex technical challenges.
@@ -96,14 +86,14 @@ export default function AboutSection() {
                 I specialize in <strong className="text-gray-900 dark:text-white">React.js</strong>,
                 <strong className="text-gray-900 dark:text-white"> Next.js</strong>, and
                 <strong className="text-gray-900 dark:text-white"> Redux</strong>, with a strong
-                focus on performance optimization, SEO, and accessibility. I'm experienced in
+                focus on performance optimization, SEO, and accessibility. I&apos;m experienced in
                 <strong className="text-gray-900 dark:text-white"> UI/UX design</strong> principles
                 and work closely with design teams to bring beautiful interfaces to life.
               </p>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 Currently working at{" "}
-                <strong className="text-gray-900 dark:text-white">Vhub.ai</strong>, I've been
+                <strong className="text-gray-900 dark:text-white">Vhub.ai</strong>, I&apos;ve been
                 instrumental in building responsive applications, integrating APIs, and implementing
                 best practices for SEO and accessibility. I thrive in
                 <strong className="text-gray-900 dark:text-white"> Agile environments</strong> and

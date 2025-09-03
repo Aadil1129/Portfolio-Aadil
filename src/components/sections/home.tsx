@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Download } from "lucide-react";
 
 export default function HomeSection() {
   const ref = useRef(null);
@@ -18,17 +17,7 @@ export default function HomeSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
+
 
   return (
     <section
@@ -85,7 +74,7 @@ export default function HomeSection() {
               className="mb-4"
             >
               <span className="text-gray-400 text-sm font-medium tracking-wider uppercase">
-                HI, I'M
+                HI, I&apos;M
               </span>
             </motion.div>
 
