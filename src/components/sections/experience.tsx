@@ -20,18 +20,6 @@ export default function ExperienceSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
   const responsibilities = [
     "Built responsive and interactive web applications using React.js and Next.js",
     "Integrated RESTful APIs and third-party services for seamless data flow",
@@ -64,7 +52,7 @@ export default function ExperienceSection() {
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              My journey in web development and the impact I've made in the industry
+              My journey in web development and the impact I&apos;ve made in the industry
             </p>
           </motion.div>
 
@@ -115,8 +103,9 @@ export default function ExperienceSection() {
                   {/* Company Description */}
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                     Vhub.ai is a cutting-edge technology company focused on AI-driven solutions and
-                    innovative web applications. As a React.js Developer, I've been instrumental in
-                    building scalable, high-performance applications that serve thousands of users.
+                    innovative web applications. As a React.js Developer, I&apos;ve been
+                    instrumental in building scalable, high-performance applications that serve
+                    thousands of users.
                   </p>
 
                   {/* Key Responsibilities */}
