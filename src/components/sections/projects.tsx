@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github, Eye } from "lucide-react";
-import Image from "next/image";
 
 export default function ProjectsSection() {
   const ref = useRef(null);
@@ -20,8 +19,6 @@ export default function ProjectsSection() {
       },
     },
   };
-
-
 
   const projects = [
     {
@@ -98,12 +95,10 @@ export default function ProjectsSection() {
               >
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <Image
+                  <img
                     src={project.image}
                     alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="w-full h-full object-cover"
                   />
                   {project.featured && (
                     <div className="absolute top-4 left-4">

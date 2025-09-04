@@ -39,7 +39,17 @@ export default function ContactSection() {
     },
   };
 
-
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -156,7 +166,7 @@ export default function ContactSection() {
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Have a project in mind or want to collaborate? I&apos;d love to hear from you. Let&apos;s
+              Have a project in mind or want to collaborate? I'd love to hear from you. Let's
               discuss how we can work together to bring your ideas to life.
             </p>
           </motion.div>
@@ -171,10 +181,10 @@ export default function ContactSection() {
             >
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Let&apos;s Connect
+                  Let's Connect
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                  I&apos;m always interested in new opportunities and exciting projects. Whether you have
+                  I'm always interested in new opportunities and exciting projects. Whether you have
                   a question, want to collaborate, or just want to say hi, feel free to reach out!
                 </p>
               </div>
@@ -292,7 +302,7 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-200"
-                    placeholder="What&apos;s this about?"
+                    placeholder="What's this about?"
                   />
                 </div>
 
@@ -347,7 +357,7 @@ export default function ContactSection() {
                       className="text-green-600 dark:text-green-400 flex-shrink-0"
                     />
                     <p className="text-green-700 dark:text-green-300">
-                      Thank you for your message! I&apos;ll get back to you soon.
+                      Thank you for your message! I'll get back to you soon.
                     </p>
                   </motion.div>
                 )}
